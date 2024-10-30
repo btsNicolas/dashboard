@@ -11,6 +11,7 @@ export class SidebarComponent {
 
   private destroy$ = new Subject<void>();
 
+  activeLink: string = '';
   isMenuOpen = true;
 
   constructor(private menuService: MenuService) {}
@@ -29,6 +30,10 @@ export class SidebarComponent {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  setActive(link: string) {
+    this.activeLink = link;
   }
 
 }

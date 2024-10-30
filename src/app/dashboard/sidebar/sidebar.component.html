@@ -1,8 +1,9 @@
 <aside [ngClass]="{'show': isMenuOpen}">
   <div class="toggle">
       <div class="logo">
-          <img src="images/logo.png">
-          <h2>Asmr<span class="danger">Prog</span></h2>
+        <a class="navbar-brand" href="https://www.globalseguroscolombia.com/" target="_blank">
+          <img src="https://www.globalseguroscolombia.com/wp-content/themes/mitema/css/img/logo.svg" width="200" height="30" class="d-inline-block align-top" alt="">
+        </a>
       </div>
       <div class="close" id="close-btn" (click)="closeMenu()">
           <span class="material-icons-sharp">
@@ -11,62 +12,33 @@
       </div>
   </div>
 
-  <div class="sidebar">
-      <a href="#">
+  <div class="sidebar" >
+      <a href="#" [ngClass]="{'active': activeLink === 'dashboard'}" (click)="setActive('dashboard')">
           <span class="material-icons-sharp">
               dashboard
           </span>
           <h3>Dashboard</h3>
       </a>
-      <a href="#">
+      <a href="#" [ngClass]="{'active': activeLink === 'user'}" (click)="setActive('user')">
           <span class="material-icons-sharp">
               person_outline
           </span>
           <h3>Users</h3>
       </a>
-      <a href="#">
+      <a href="#" [ngClass]="{'active': activeLink === 'history'}" (click)="setActive('history')">
           <span class="material-icons-sharp">
               receipt_long
           </span>
           <h3>History</h3>
       </a>
-      <a href="#" class="active">
+      <a href="#" [ngClass]="{'active': activeLink === 'analytics'}" (click)="setActive('analytics')">
           <span class="material-icons-sharp">
               insights
           </span>
           <h3>Analytics</h3>
       </a>
-      <a href="#">
-          <span class="material-icons-sharp">
-              mail_outline
-          </span>
-          <h3>Tickets</h3>
-          <span class="message-count">27</span>
-      </a>
-      <a href="#">
-          <span class="material-icons-sharp">
-              inventory
-          </span>
-          <h3>Sale List</h3>
-      </a>
-      <a href="#">
-          <span class="material-icons-sharp">
-              report_gmailerrorred
-          </span>
-          <h3>Reports</h3>
-      </a>
-      <a href="#">
-          <span class="material-icons-sharp">
-              settings
-          </span>
-          <h3>Settings</h3>
-      </a>
-      <a href="#">
-          <span class="material-icons-sharp">
-              add
-          </span>
-          <h3>New Login</h3>
-      </a>
+
+
       <a href="#">
           <span class="material-icons-sharp">
               logout

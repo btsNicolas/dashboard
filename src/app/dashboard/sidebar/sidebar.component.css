@@ -15,8 +15,7 @@ aside .toggle .logo{
 }
 
 aside .toggle .logo img{
-  width: 2rem;
-  height: 2rem;
+  width: 100%;
 }
 
 aside .toggle .close{
@@ -32,8 +31,9 @@ aside .sidebar{
   border-radius: 15px;
   height: 88vh;
   position: relative;
-  top: 1.5rem;
+  top: 0.5rem;
   transition: all 0.3s ease;
+  max-width: 12vw;
 }
 
 aside .sidebar:hover{
@@ -47,7 +47,8 @@ aside .sidebar a{
   height: 3.7rem;
   gap: 1rem;
   position: relative;
-  margin-left: 2rem;
+  margin-left: 1.2rem;
+  margin-right: 10rem;
   transition: all 0.3s ease;
 }
 
@@ -85,9 +86,7 @@ aside .sidebar a:hover{
   color: var(--color-primary);
 }
 
-aside .sidebar a:hover span{
-  margin-left: 0.6rem;
-}
+
 
 aside .sidebar .message-count{
   background-color: var(--color-danger);
@@ -101,6 +100,10 @@ aside .sidebar .message-count{
 
 @media screen and (max-width: 1200px) {
 
+  aside .sidebar{
+    top: 0;
+}
+
   aside .logo h2{
       display: none;
   }
@@ -110,7 +113,8 @@ aside .sidebar .message-count{
   }
 
   aside .sidebar a{
-      width: 5.6rem;
+      width: 4rem;
+      margin-right: 0rem;
   }
 
   aside .sidebar a:last-child{
@@ -131,10 +135,13 @@ aside .sidebar .message-count{
       height: 100vh;
       left: -100%;
       visibility: hidden;
-    opacity: 0;
+      opacity: 0;
       animation: showMenu 0.4s ease forwards;
   }
 
+  aside .sidebar{
+    max-width: 100%;
+  }
 
   aside.show {
     left: 0;
